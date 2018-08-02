@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
-  # include SessionHelper
   def home
+  end
+
+  def univers
   end
 end

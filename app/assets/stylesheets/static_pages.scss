@@ -1,20 +1,15 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-span.btn {
-  a {
-    color: white;
-  }
-}
 
 section.CTA {
-  height: 650px;
-  background-image: url(asset-path("abg.jpg"));
-  background-repeat: no-repeat;
+  height: 700px;
+  background-image: url(abg.jpg);
   background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: white;
 }
 
-div.section {
-  padding-top: 400px;
-  color: white;
+.secret {
+  color: red;
 }
