@@ -1,21 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Heroku on Rails</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <span class="nav-link"><%= link_to "Accueil",   '/' %></span>
+          <span class="nav-link"><%= link_to "Home", root_path %></span>
         </li>
+        <% if logged_in? %>
         <li class="nav-item">
-          <span class="nav-link"><%= link_to "Index des gossips", '/gossips' %></span>
+          <span class="nav-link"><%= link_to "Users", '#' %></span>
+        </li>
+        <li>
+          <span class="nav-link"><%= link_to "Log Out", logout_path, method: :delete %></span>
         </li>
       </ul>
+      <% else %>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <span class="btn btn-primary"><%= link_to "Nouveau gossip", '/gossips/new' %></span>
+          <span class="btn btn-primary"><%= link_to "Sign Up", signup_path %></span>
         </li>
+        <li>
+          <span class="btn btn-primary"><%= link_to "Log In", login_path %></span>
+        </li>
+        <% end %>
       </ul>
     </div>
 </nav>
